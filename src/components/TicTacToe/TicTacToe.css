@@ -1,36 +1,45 @@
 .container {
     text-align: center;
+    padding: 20px;
 }
 .title {
-    margin-top: 50px;
+    margin-top: 30px;
     color: white;
-    font-size: 60px;
+    font-size: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .title span {
     color: #26ffcb;
-    padding-left: 15px;
+    padding-left: 10px;
+}
+.turn-indicator {
+    font-size: 24px;
+    color: white;
+    margin: 15px 0;
+}
+.turn-indicator span {
+    color: #26ffcb;
 }
 .reset {
-    width: 250px;
-    height: 100px;
+    width: 220px;
+    height: 80px;
     border: none;
     outline: none;
     cursor: pointer;
     border-radius: 50px;
     background: #1f3540;
-    font-size: 26px;
+    font-size: 24px;
     color: #26ffcb;
     margin-top: 25px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 .board {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 10px;
     margin: auto;
 }
@@ -40,16 +49,58 @@
 }
 .boxes {
     display: flex;
-    height: 180px;
-    width: 180px;
+    height: 120px;
+    width: 120px;
     background: #1f3540;
     border: 4px solid #0f1b21;
     border-radius: 12px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease-in-out;
 }
 .boxes img {
     width: 70%;
     height: 70%;
+}
+
+/* ✅ Responsive Styling */
+@media (max-width: 768px) {
+    .title {
+        font-size: 36px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .turn-indicator {
+        font-size: 20px;
+    }
+
+    .boxes {
+        width: 90px;
+        height: 90px;
+    }
+
+    .reset {
+        width: 180px;
+        height: 60px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 28px;
+    }
+
+    .boxes {
+        width: 70px;
+        height: 70px;
+    }
+
+    .reset {
+        width: 160px;
+        height: 50px;
+        font-size: 18px;
+    }
 }
